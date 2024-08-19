@@ -40,8 +40,8 @@ const Steps = () => {
                 className={cn(
                   "absolute left-0 top-0 h-full w-1 bg-zinc-400 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full",
                   {
-                    "bg-zinc-700": isCurrent,
-                    "bg-primary": isCompleted,
+                    "bg-primary": isCurrent,
+                    "bg-zinc-700": isCompleted,
                   }
                 )}
                 aria-hidden="true"
@@ -60,7 +60,7 @@ const Steps = () => {
                       "flex h-20 w-20 object-contain items-center justify-center",
                       {
                         "border-none": isCompleted,
-                        "border-zinc-700": isCurrent,
+                        "border-primary": isCurrent,
                       }
                     )}
                   />
@@ -69,8 +69,8 @@ const Steps = () => {
                 <span className="ml-4 h-full mt-0.5 flex min-w-0 flex-col justify-center">
                   <span
                     className={cn("text-sm font-semibold text-zinc-700", {
-                      "text-primary": isCompleted,
-                      "text-zinc-700": isCurrent,
+                      "text-zinc-700": isCompleted,
+                      "text-primary": isCurrent,
                     })}
                   >
                     {step.name}
