@@ -35,7 +35,7 @@ const PhonePreview = ({
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [ref.current]);
+  }, []);
 
   let caseBackgroundColor = "bg-zinc-950";
 
@@ -60,6 +60,7 @@ const PhonePreview = ({
             caseBackgroundColor
           )}
           src={croppedImageUrl}
+          alt="Custom phonecase image"
         />
       </div>
 

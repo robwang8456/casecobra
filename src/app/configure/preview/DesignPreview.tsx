@@ -27,7 +27,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
   useEffect(() => {
     setShowConfetti(true);
-  });
+  }, []);
 
   const { color, model, finish, material } = configuration;
   const tw = COLORS.find(

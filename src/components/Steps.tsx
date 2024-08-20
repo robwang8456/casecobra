@@ -63,6 +63,7 @@ const Steps = () => {
                         "border-primary": isCurrent,
                       }
                     )}
+                    alt="steps image"
                   />
                 </span>
 
