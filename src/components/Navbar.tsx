@@ -2,12 +2,17 @@ import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import { getKindeServerSession, LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server";
+import {
+  getKindeServerSession,
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  const isAdmin = user?.email === process.env.ADMIN_EMAIL
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
   return (
     <nav
@@ -42,6 +47,15 @@ const Navbar = async () => {
                     Dashboard
                   </Link>
                 ) : null}
+                <Link
+                  href="/my-orders"
+                  className={buttonVariants({
+                    size: "sm",
+                    variant: "ghost",
+                  })}
+                >
+                  My Orders
+                </Link>
                 <Link
                   href="/configure/upload"
                   className={buttonVariants({
